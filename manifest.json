@@ -17,7 +17,7 @@
     "128": "icon1.png" },
 
   "content_scripts": [{
-    "matches": ["http://www.facebook.com/","https://www.facebook.com/"],
+    "matches": ["http://www.facebook.com/*","https://www.facebook.com/*"],
     "js": ["jQuery-3.3.1.min.js","content.js"]
   }]
  

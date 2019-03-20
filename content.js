@@ -2,6 +2,8 @@ $(document).ready(function () {
 
 	// the section name and its corresponding id (or part of its id)
 	var optionsIDsDictionary = { "marketplace": 'marketplace', "games": 'game', "stories": 'stories', "eventsReminder": 'reminders', "peopleRequestsOrYouMayKnow": 'pagelet_ego' };
+	
+	// the sections you select
 	var arrayOfOptions = [];
 
 

@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-	// when a checkbox is selected make its label red and bold
+	// when a checkbox is selected make its label red and bold (and vice versa)
 	$("input[name='sectionsToBlock']").change(function() {
 		if(this.checked) {
 			$("label[for=" + this.id + "]").addClass('text-danger font-weight-bold');
@@ -11,16 +11,7 @@ $(document).ready(function () {
 	});
 
 
-	// chrome.runtime.onInstalled.addListener(function () {
-	// 	if(details.reason == "install"){
-	// 	alert('installed !')
-	// 	chrome.storage.sync.set({ "blockList": ['marketplace'] }, function () {
-	// 	});
-	// 	}
-	// });
-
-
-	// get the initial STORED values to show blocked as checked
+	// get the initial STORED values to show blocked sections as checked boxes (with red bold labels)
 	chrome.storage.sync.get(["blockList"], function (items) {
 		$.each(items.blockList, function (i, item) {
 			var itemSelected = $('#' + item);
@@ -29,9 +20,8 @@ $(document).ready(function () {
 		});
 	});
 
-
+	// on submit button click, store checked boxes in blockList, store non-checked ones in allowList
 	$('#submitButton').click(function () {
-
 		var blockList = [];
 		var allowList = [];
 		$.each($("input[name='sectionsToBlock']"), function () {
@@ -43,6 +33,7 @@ $(document).ready(function () {
 			}
 		});
 
+		// send messages to the content.js file
 		chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
 			chrome.tabs.sendMessage(tabs[0].id, { content: blockList, type: 'blockMessage' }, function () {
 			});
@@ -51,7 +42,8 @@ $(document).ready(function () {
 
 		});
 
-		chrome.storage.sync.set({ "blockList": blockList, "allowList": allowList }, function () {
+		// save the checked boxes (sections to be blocked) in STORAGE
+		chrome.storage.sync.set({ "blockList": blockList}, function () {
 		});
 
 	});
