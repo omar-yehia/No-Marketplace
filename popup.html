@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<!-- Author: Omar yehia -->
+<!-- github: https://github.com/omar-yahia/ -->
+<head>
+    <title>No Marketplace</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <script src="jQuery-3.3.1.min.js"></script>
+    <script src="popup.js"></script>
+
+</head>
+
+<body>
+    <div class="card" style="min-width:18rem;">
+
+        <div class="card-body m-2">
+            <h4 class="card-title"><span class="text-info">Choose the sections you want to</span> <span
+                    class="text-danger font-weight-bold">BLOCK</span></h4>
+            <div class="card-text">
+                <input type="checkbox" id="marketplace" value="marketplace" name="sectionsToBlock">
+                <label for="marketplace">Marketplace</label> <br>
+
+                <input type="checkbox" id="games" value="games" name="sectionsToBlock">
+                <label for="games"> Games</label> <br>
+
+                <input type="checkbox" id="stories" value="stories" name="sectionsToBlock">
+                <label for="stories">Stories</label> <br>
+
+                <input type="checkbox" id="eventsReminder" value="eventsReminder" name="sectionsToBlock">
+                <label for="eventsReminder"> Events Reminder</label> <br>
+
+                <input type="checkbox" id="peopleRequestsOrYouMayKnow" value="peopleRequestsOrYouMayKnow"
+                    name="sectionsToBlock">
+                <label for="peopleRequestsOrYouMayKnow"> Requests and People</label> <br>
+            </div>
+
+            <br>
+            <button class="btn btn-success w-100" id="submitButton">Submit</button>
+        </div>
+
+
+    </div>
+
+    <p class="text-muted m-1"> By <a href="http://www.omaryehia.art" target="_blank">Omar Yehia</a></p>
+</body>
+
+</html>
