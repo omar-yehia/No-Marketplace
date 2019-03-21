@@ -3,7 +3,7 @@
 
 2019 Omar Yehia
 
-Facebook hompage has many sections on the side.
+Facebook homepage has many sections on the side.
 One of them is the marketplace section,
 which (at least here in Egypt) usualy displays images of tight womensware.
 Repetitive and irretating ads like this made me want to solve this problem.
