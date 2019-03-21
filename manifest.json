@@ -4,17 +4,14 @@
   "name": "No Marketplace",
   "version": "0.1.4",
   "description": "Remove Marketplace from Facebook Homepage",
+  "icons": {
+    "128": "icon1.png" },
 
   "browser_action": {
     "default_popup": "popup.html"
   },
   "permissions" : ["tabs","storage"],
   
-  
-  "icons": {
-    "16": "icon1.png",
-    "48": "icon1.png",
-    "128": "icon1.png" },
 
   "content_scripts": [{
     "matches": ["http://www.facebook.com/*","https://www.facebook.com/*"],
