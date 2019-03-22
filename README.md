@@ -3,10 +3,10 @@
 
 2019 Omar Yehia
 
-Facebook homepage has many sections on the side.
-One of them is the marketplace section,
-which (at least here in Egypt) usually displays images of tight womenswear.
-Repetitive and irritating ads like this made me want to solve this problem.
+Remove Marketplace from Facebook Homepage.
+Facebook homepage has many sections on the side,
+one of them is the marketplace section,
+which sometimes displays repetitive and annoying suggestions.
 The solution was this Chrome Extension that enables you to hide/show those sections as you want.
 
 You can use the code under MIT License, in short, you can do whatever you want with the code, provided that you include the license as it is with your code.
